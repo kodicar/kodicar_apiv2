@@ -31,6 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cars', 
+    'blog', 
+    'contact',
+    'users',
+    'rentals',
+    'reviews',
+    'rest_framework',
+    'rest_framework',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -100,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# AUTH_USER_MODEL = "users.Profile"
+AUTH_USER_MODEL = "users.Profile"
 
 
 # Internationalization
