@@ -13,7 +13,7 @@ class Profile(AbstractUser):
     avatar = models.ImageField(upload_to="avatars", blank=True)
     favs = models.ManyToManyField("cars.Cars", related_name="favs")
     rented = models.ManyToManyField("rentals.Rentals", related_name="rentals")
-    reviews = models.ManyToManyField("reviews.Reviews", related_name="reviews")
+    review = models.ManyToManyField("reviews.Reviews", related_name="review")
     
 
     def car_count(self):
