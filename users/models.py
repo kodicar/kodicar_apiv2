@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cars.models import Cars
+from rentals.models import Rentals
+from reviews.models import Reviews
 
 # Create your models here.
 
