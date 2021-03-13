@@ -1,13 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cars.models import Cars
-from kodicar_api import settings
+from kodicarapiv2 import settings
 
 # Create your models here.
 
 class Reviews(models.Model):
     # author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     car = models.ForeignKey(Cars, on_delete=models.CASCADE)
     rating = models.IntegerField()
     title = models.CharField( max_length=50)
