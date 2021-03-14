@@ -20,18 +20,18 @@ class CarDetail(generics.RetrieveDestroyAPIView):
     serializer_class = CarSerializer
 
 class CarCreate(generics.CreateAPIView):
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication, BasicAuthentication]
+    # permission_classes = [IsAuthenticated]
     queryset = Cars.objects.all()
     serializer_class = CarSerializer
 
-    def get(self, request, format=None):
-        content = {
-            'user': unicode(request.user),
-            'auth': unicode(request.auth),
-        }
+    # def get(self, request, format=None):
+    #     content = {
+    #         'user': unicode(request.user),
+    #         'auth': unicode(request.auth),
+    #     }
 
-        return Response(content)
+    #     return Response(content)
 
 
 class CarDelete(generics.RetrieveUpdateDestroyAPIView):
