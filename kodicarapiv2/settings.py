@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,8 +57,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'kodicarapiv2.urls'
@@ -134,6 +134,10 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = Path(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+MEDIAFILES_DIRS = (
+    Path(BASE_DIR, 'media'),
+)
 
 STATICFILES_DIRS = (
     Path(BASE_DIR, 'static'),
