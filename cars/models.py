@@ -133,6 +133,7 @@ class Cars(models.Model):
         ('Hyundai', 'Hyundai'),
         ('Apple', 'Apple'),
         ('Subaru', 'Subaru'),
+        ('Bugatti', 'Bugatti'),
 
     )
 
