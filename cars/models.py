@@ -128,6 +128,12 @@ class Cars(models.Model):
         ('Porsche', 'Porsche'),
         ('BMW', 'Subaru'),
         ('Acura', 'Acura'),
+        ('Dodge', 'Dodge'),
+        ('Toyota', 'Toyota'),
+        ('Hyundai', 'Hyundai'),
+        ('Apple', 'Apple'),
+        ('Subaru', 'Subaru'),
+
     )
 
     profiles = (
