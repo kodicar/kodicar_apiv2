@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ym0v+*uy#%qqxdxqt82ilgvev#@=@_os!a-*dl@s(jz$!8#z*9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kodicarmvpapi.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
+
+# ALLOWED_HOSTS = ['kodicarmvpapi.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -146,9 +148,9 @@ STATICFILES_DIRS = (
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "https://kodicarmvp.herokuapp.com/",
+    # "https://kodicarmvp.herokuapp.com/",
     "http://192.168.43.95:3000",
-    "http://localhost:5000/",
+    # "http://localhost:5000/",
 ]
 
 
