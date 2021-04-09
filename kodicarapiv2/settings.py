@@ -149,7 +149,7 @@ STATICFILES_DIRS = (
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    # "https://kodicarmvp.herokuapp.com/",
+    "https://kodicarmvp.herokuapp.com/",
     "http://192.168.43.95:3000",
     # "http://localhost:5000/",
 ]
@@ -182,7 +182,9 @@ CORS_ALLOW_METHODS = [
 # AWS_SECRET_ACCESS_KEY
 # AWS_STORAGE_BUCKET_NAME
 
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
+
+# s3 buckets
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
