@@ -26,6 +26,7 @@ urlpatterns = [
     path('users/', include("users.urls")),
     path('reviews/', include("reviews.urls")),
     path('rentals/', include("rentals.urls")),
+    path('auth/', include('rest_framework.urls')),
 
 ]
 if settings.DEBUG:

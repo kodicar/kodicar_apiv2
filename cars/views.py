@@ -7,6 +7,7 @@ from .serializers import CarSerializer, PhotoSerializer, CategorySerializer
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated 
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from . permissions import *
 
 
 
@@ -21,7 +22,7 @@ class CarDetail(generics.RetrieveDestroyAPIView):
 
 class CarCreate(generics.CreateAPIView):
     # authentication_classes = [SessionAuthentication, BasicAuthentication]
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Cars.objects.all()
     serializer_class = CarSerializer
 
@@ -35,7 +36,7 @@ class CarCreate(generics.CreateAPIView):
 
 
 class CarDelete(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsOwner]
     queryset = Cars.objects.all()
     serializer_class = CarSerializer
 
