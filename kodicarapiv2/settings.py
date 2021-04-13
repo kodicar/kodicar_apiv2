@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
-# ALLOWED_HOSTS = ['kodicarmvpapi.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['kodicarmvpapi.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
