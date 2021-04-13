@@ -153,9 +153,9 @@ STATICFILES_DIRS = (
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "https://kodicarmvp.herokuapp.com/",
+    "https://kodicarmvp.herokuapp.com",
     "http://192.168.43.95:3000",
-    "http://localhost:5000/",
+    "http://localhost:5000",
 ]
 
 
