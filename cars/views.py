@@ -36,6 +36,8 @@ class CarCreate(generics.CreateAPIView):
 
 
 class CarDelete(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
     permission_classes = [IsOwner]
     queryset = Cars.objects.all()
     serializer_class = CarSerializer

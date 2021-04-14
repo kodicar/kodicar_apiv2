@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import ArticleList, ArticleDetail, CommentsList, ArticleViewSet
+from .views import ArticleList, ArticleDetail, CommentsList, ArticleViewSet, CreateComment
 from rest_framework.routers import DefaultRouter
 
 
@@ -10,6 +10,7 @@ urlpatterns = [
     path("articles/", ArticleList.as_view()),
     path("articles/<int:pk>/", ArticleDetail.as_view()),
     path("comments/", CommentsList.as_view()),
+    path("createcomment/", CreateComment.as_view()),
     
 ]
 
