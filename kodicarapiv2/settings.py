@@ -25,8 +25,6 @@ SECRET_KEY = 'ym0v+*uy#%qqxdxqt82ilgvev#@=@_os!a-*dl@s(jz$!8#z*9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 ALLOWED_HOSTS = ['kodicarmvpapi.herokuapp.com', '127.0.0.1']
 
 
@@ -94,9 +92,9 @@ DATABASES = {
     }
 }
 
-import dj_database_url
+# import dj_database_url
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
