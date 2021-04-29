@@ -21,8 +21,8 @@ class CarDetail(generics.RetrieveDestroyAPIView):
     serializer_class = CarSerializer
 
 class CarCreate(generics.CreateAPIView):
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication, BasicAuthentication]
+    # permission_classes = [IsAuthenticated]
     queryset = Cars.objects.all()
     serializer_class = CarSerializer
 
