@@ -156,6 +156,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5000",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://kodicarmvp.herokuapp.com",
+]
+
 
 CORS_ALLOW_HEADERS = [
     'accept',
