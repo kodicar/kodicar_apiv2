@@ -12,7 +12,7 @@ class CarSerializer(serializers.ModelSerializer):
                     "convertible", "child_seat", "longterm_car", "bike_rack", "profile_photo", "mobile_number", 
                     "drivers_license", "your_goals", "car_category"
         )
-        exclude = ("date_added")
+        exclude = ["date_added",]
 
         # todo for all serializers
         # read_only_fields = ("user", "id", "created", "updated")
