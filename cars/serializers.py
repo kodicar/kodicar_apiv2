@@ -13,7 +13,7 @@ class PhotoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Photo
         fields = "__all__"
-        exclude = ("date_added",)
+        # exclude = ("date_added",)
 
 
 class CategorySerializer(serializers.ModelSerializer):
