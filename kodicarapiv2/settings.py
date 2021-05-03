@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'reviews',
     'rest_framework',
     'rest_framework.authtoken',
-    'djoser',
+    'rest_auth',
     'corsheaders',
     'storages',
     'django.contrib.admin',

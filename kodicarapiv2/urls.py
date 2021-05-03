@@ -27,7 +27,7 @@ urlpatterns = [
     path('reviews/', include("reviews.urls")),
     path('rentals/', include("rentals.urls")),
     path('auth/', include('rest_framework.urls')),
-    path('rest-auth/', include('djoser.urls')),
+    path('rest-auth/', include('rest_auth.urls')),
 
 ]
 if settings.DEBUG:
