@@ -10,6 +10,9 @@ from . serializers import UserSerializer
 from django.contrib.auth import authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated 
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from . models import Profile
 
 # Create your views here.
 
@@ -17,6 +20,12 @@ class UserCreate(generics.CreateAPIView):
     authentication_classes = ()
     permission_classes = ()
     serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveAPIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserSerializer
+    queryset = Profile.objects.all()
 
 class LoginView(APIView):
     permission_classes = ()
