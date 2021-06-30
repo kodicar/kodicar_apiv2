@@ -155,10 +155,12 @@ CORS_ALLOWED_ORIGINS = [
     "https://kodicarmvp.herokuapp.com",
     "http://192.168.43.95:3000",
     "http://localhost:5000",
+    "https://www.kodicar.co.ke",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://kodicarmvp.herokuapp.com",
+    "https://www.kodicar.co.ke",
 ]
 
 
