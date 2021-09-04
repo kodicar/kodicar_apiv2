@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'users',
     'rentals',
     'reviews',
+    'waitinglist',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',

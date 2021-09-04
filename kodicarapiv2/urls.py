@@ -28,6 +28,7 @@ urlpatterns = [
     path('rentals/', include("rentals.urls")),
     path('auth/', include('rest_framework.urls')),
     path('rest-auth/', include('rest_auth.urls')),
+    path('waitinglist/', include('waitinglist.urls')),
 
 ]
 if settings.DEBUG:
