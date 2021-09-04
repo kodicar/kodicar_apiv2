@@ -155,11 +155,15 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "https://kodicarmvp.herokuapp.com",
     "http://192.168.43.95:3000",
-    "http://localhost:5000",
+    "http://localhost:3000",
+    "https://www.kodicar.co.ke",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://kodicarmvp.herokuapp.com",
+    "https://www.kodicar.co.ke",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
 ]
 
 
@@ -184,18 +188,19 @@ CORS_ALLOW_METHODS = [
     'PUT',
 ]
 
+# s3 configurations
 
-# todo: will set this one once i finish setting up my aws acccount
-# AWS_ACCESS_KEY_ID
-# AWS_SECRET_ACCESS_KEY
-# AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID="AKIAVNWRGBHBAWSEU33Q"
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='kodicar'
+AWS_QUERYSTRING_AUTH = False
 
 
-# s3 buckets
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
+# s3 storages
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # REST_FRAMEWORK = {
 
