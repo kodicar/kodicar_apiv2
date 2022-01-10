@@ -57,13 +57,13 @@ class Category(models.Model):
         return self.cat_name
 
 class Cars(models.Model):
-    countries = (
-        ('Kenya', 'Kenya'),
-        ('Tanzania', 'Tanzania'),
-        ('Uganda',  'Uganda'),
-        ('Sudan', 'Sudan'),
-        ('Somalia', 'Somalia'),
-    )
+    # countries = (
+    #     ('Kenya', 'Kenya'),
+    #     ('Tanzania', 'Tanzania'),
+    #     ('Uganda',  'Uganda'),
+    #     ('Sudan', 'Sudan'),
+    #     ('Somalia', 'Somalia'),
+    # )
 
     counties = (
 
@@ -137,23 +137,23 @@ class Cars(models.Model):
 
     )
 
-    profiles = (
-        ('CAR_OWNER', 'Car_owner'),
-        ('CAR_RENTAL_COMPANY', 'Car_Rental_Company'),
-    )
+    # profiles = (
+    #     ('CAR_OWNER', 'Car_owner'),
+    #     ('CAR_RENTAL_COMPANY', 'Car_Rental_Company'),
+    # )
     # location
     
-    country = models.CharField(default='select country', max_length=100 , choices=countries)
-    street_address = models.CharField(max_length=200)
+    # country = models.CharField(default='select country', max_length=100 , choices=countries)
+    # street_address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
     county = models.CharField(max_length=200, choices=counties, default='Nairobi')
-    postal_code = models.CharField(max_length=100)
+    # postal_code = models.CharField(max_length=100)
 
     # car information
     year = models.IntegerField()
     make = models.CharField(max_length=100, default='Tesla', choices=makes)
     model = models.CharField(max_length=100)
-    odometer = models.CharField(max_length=300)
+    # odometer = models.CharField(max_length=300)
     car_category = models.ForeignKey(Category, on_delete= models.CASCADE)
     colour = models.CharField(max_length=50)
     mpg = models.CharField(max_length=50)
@@ -165,19 +165,19 @@ class Cars(models.Model):
         ('Manual', 'Manual'),
     )
     transmission = models.CharField(max_length=200, choices=Transmissions)
-    market_value = models.CharField(max_length=300)
-    vin = models.CharField(max_length=17)
-    license_plate = models.CharField(max_length=30)
+    # market_value = models.CharField(max_length=300)
+    # vin = models.CharField(max_length=17)
+    # license_plate = models.CharField(max_length=30)
 
     # car_image = models.ImageField( upload_to='cars')
-    price_per_day = models.IntegerField()
+    # price_per_day = models.IntegerField()
     car_details = models.TextField()
     description = models.TextField()
     # car availability 
-    as_from = models.DateField()
-    to = models.DateField()
-    guideline = models.TextField(max_length=300)
-    safety_and_quality_standards = models.BooleanField()
+    # as_from = models.DateField()
+    # to = models.DateField()
+    # guideline = models.TextField(max_length=300)
+    # safety_and_quality_standards = models.BooleanField()
 
     # features 
     # cretae single textfields to handle description
@@ -196,10 +196,10 @@ class Cars(models.Model):
 
 
     # owner information
-    profile_photo = models.ImageField( upload_to = 'profiles')
-    mobile_number = models.IntegerField()
-    drivers_license = models.CharField(max_length=200)
-    your_goals = models.TextField()
+    # profile_photo = models.ImageField( upload_to = 'profiles')
+    # mobile_number = models.IntegerField()
+    # drivers_license = models.CharField(max_length=200)
+    # your_goals = models.TextField()
     date_added = models.DateTimeField(auto_now=True)
     # owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
@@ -241,13 +241,9 @@ class Cars(models.Model):
 
 class Photo(TimeStampedModel):
     """Photo Model Definition"""
-    # car = models.ForeignKey("Car.Model", verbose_name=_(""), on_delete=models.CASCADE)
-    # phot= models.ImageField(_(""), upload_to=None, height_field=None, width_field=None, max_length=None)
-
-
     caption = models.CharField(max_length=80)
     file = models.ImageField(upload_to = 'car_photos')
-    cars = models.ForeignKey(Cars, on_delete=models.CASCADE, related_name="photos")
+    photo = models.ForeignKey(Cars, on_delete=models.CASCADE, related_name="photos")
 
     def __str__(self):
         return self.caption
