@@ -5,7 +5,7 @@ from rest_framework.authtoken.models import Token
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ('username', 'first_name', 'last_name', 'email', 'avatar',  'password')
+        fields = ('username', 'first_name', 'last_name', 'email', 'avatar', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def validated_first_name(self, value):
