@@ -195,8 +195,8 @@ CORS_ALLOW_METHODS = [
 
 # s3 configurations
 
-AWS_ACCESS_KEY_ID="AKIAVNWRGBHBAWSEU33Q"
-AWS_SECRET_ACCESS_KEY='obSjrOCAwkVzydNwzNiS1BX2fyaxxhtpL8Pgmj61'
+AWS_ACCESS_KEY_ID=" your aws access key"
+AWS_SECRET_ACCESS_KEY='your aws secret key'
 AWS_STORAGE_BUCKET_NAME='kodicar'
 AWS_QUERYSTRING_AUTH = False
 
