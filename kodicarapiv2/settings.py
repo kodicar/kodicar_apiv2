@@ -157,8 +157,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.43.95:3000",
     "http://localhost:3000",
     "https://www.kodicar.co.ke",
-    "https://consharetest.herokuapp.com",
-    "https://www.conshare.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -166,8 +164,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://www.kodicar.co.ke",
     "http://127.0.0.1:3000",
     "http://localhost:3000",
-    "https://consharetest.herokuapp.com",
-    "https://www.conshare.app",
 
 ]
 
